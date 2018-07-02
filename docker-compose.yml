@@ -36,6 +36,14 @@ services:
       - .:/myapp
       - "auth_cache:/home/user/.ssh"
 
+  guard:
+    build: .
+    command: bash -c "guard"
+    volumes:
+      - bundle_cache:/bundle
+      - .:/myapp
+      - "auth_cache:/home/user/.ssh"
+
 volumes:
   bundle_cache:
   auth_cache:
