@@ -37,7 +37,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 
   gem "rspec"
-  gem "guard-rspec"
+  gem "rspec-given"
+  gem "guard-rspec", require: false
 end
 
 group :development do
