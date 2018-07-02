@@ -15,7 +15,7 @@ describe Snowflake::Core do
         project_management: 4,
         communication: 1,
         craft: 1,
-        initialitive: 4,
+        initiative: 4,
         career_development: 3,
         org_design: 2,
         wellbeing: 0,

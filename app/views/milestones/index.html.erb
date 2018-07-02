@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Milestones</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Mobile</th>
+      <th>Web client</th>
+      <th>Foundations</th>
+      <th>Servers</th>
+      <th>Project management</th>
+      <th>Communication</th>
+      <th>Craft</th>
+      <th>Initiative</th>
+      <th>Career development</th>
+      <th>Org design</th>
+      <th>Wellbeing</th>
+      <th>Accomplishment</th>
+      <th>Mentorship</th>
+      <th>Evangelism</th>
+      <th>Recruiting</th>
+      <th>Community</th>
+      <th>Employee</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @milestones.each do |milestone| %>
+      <tr>
+        <td><%= milestone.mobile %></td>
+        <td><%= milestone.web_client %></td>
+        <td><%= milestone.foundations %></td>
+        <td><%= milestone.servers %></td>
+        <td><%= milestone.project_management %></td>
+        <td><%= milestone.communication %></td>
+        <td><%= milestone.craft %></td>
+        <td><%= milestone.initiative %></td>
+        <td><%= milestone.career_development %></td>
+        <td><%= milestone.org_design %></td>
+        <td><%= milestone.wellbeing %></td>
+        <td><%= milestone.accomplishment %></td>
+        <td><%= milestone.mentorship %></td>
+        <td><%= milestone.evangelism %></td>
+        <td><%= milestone.recruiting %></td>
+        <td><%= milestone.community %></td>
+        <td><%= milestone.employee %></td>
+        <td><%= link_to 'Show', milestone %></td>
+        <td><%= link_to 'Edit', edit_milestone_path(milestone) %></td>
+        <td><%= link_to 'Destroy', milestone, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Milestone', new_milestone_path %>

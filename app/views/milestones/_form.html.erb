@@ -1,0 +1,102 @@
+<%= form_with(model: milestone, local: true) do |form| %>
+  <% if milestone.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(milestone.errors.count, "error") %> prohibited this milestone from being saved:</h2>
+
+      <ul>
+      <% milestone.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.number_field :mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :web_client %>
+    <%= form.number_field :web_client %>
+  </div>
+
+  <div class="field">
+    <%= form.label :foundations %>
+    <%= form.number_field :foundations %>
+  </div>
+
+  <div class="field">
+    <%= form.label :servers %>
+    <%= form.number_field :servers %>
+  </div>
+
+  <div class="field">
+    <%= form.label :project_management %>
+    <%= form.number_field :project_management %>
+  </div>
+
+  <div class="field">
+    <%= form.label :communication %>
+    <%= form.number_field :communication %>
+  </div>
+
+  <div class="field">
+    <%= form.label :craft %>
+    <%= form.number_field :craft %>
+  </div>
+
+  <div class="field">
+    <%= form.label :initiative %>
+    <%= form.number_field :initiative %>
+  </div>
+
+  <div class="field">
+    <%= form.label :career_development %>
+    <%= form.number_field :career_development %>
+  </div>
+
+  <div class="field">
+    <%= form.label :org_design %>
+    <%= form.number_field :org_design %>
+  </div>
+
+  <div class="field">
+    <%= form.label :wellbeing %>
+    <%= form.number_field :wellbeing %>
+  </div>
+
+  <div class="field">
+    <%= form.label :accomplishment %>
+    <%= form.number_field :accomplishment %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mentorship %>
+    <%= form.number_field :mentorship %>
+  </div>
+
+  <div class="field">
+    <%= form.label :evangelism %>
+    <%= form.number_field :evangelism %>
+  </div>
+
+  <div class="field">
+    <%= form.label :recruiting %>
+    <%= form.number_field :recruiting %>
+  </div>
+
+  <div class="field">
+    <%= form.label :community %>
+    <%= form.number_field :community %>
+  </div>
+
+  <div class="field">
+    <%= form.label :employee_id %>
+    <%= form.text_field :employee_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

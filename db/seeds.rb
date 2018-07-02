@@ -1,7 +1,24 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+employee = Employee.where(
+  name: "Cersei Lannister",
+  title: "Staff Engineer"
+).first_or_create!
+
+milestone = Milestone.where(
+  mobile: 1,
+  web_client: 2,
+  foundations: 3,
+  servers: 2,
+  project_management: 4,
+  communication: 1,
+  craft: 1,
+  initiative: 4,
+  career_development: 3,
+  org_design: 2,
+  wellbeing: 0,
+  accomplishment: 4,
+  mentorship: 2,
+  evangelism: 2,
+  recruiting: 3,
+  community: 0,
+  employee: employee
+).first_or_create!
