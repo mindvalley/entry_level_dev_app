@@ -11,11 +11,15 @@
 </p>
 
 <p>
-  <strong>CGM link:</strong>
+  <strong>CGM:</strong>
+  <ul>
   <% @employee.milestones.each do |milestone| %>
-  <% url = milestone.to_url %>
-    <a href="<%= url %>"><%= url %></a>
+    <% url = milestone.to_url %>
+    <li>
+      <a href="<%= url %>"><%= milestone.created_at.to_s(:rfc822) %></a>
+    </li>
   <% end %>
+  </ul>
 </p>
 
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
