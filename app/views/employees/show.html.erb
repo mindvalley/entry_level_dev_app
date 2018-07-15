@@ -10,5 +10,13 @@
   <%= @employee.title %>
 </p>
 
+<p>
+  <strong>CGM link:</strong>
+  <% @employee.milestones.each do |milestone| %>
+  <% url = milestone.to_url %>
+    <a href="<%= url %>"><%= url %></a>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_employee_path(@employee) %> |
 <%= link_to 'Back', employees_path %>
