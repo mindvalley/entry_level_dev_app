@@ -39,6 +39,7 @@ group :development, :test do
   gem "rspec"
   gem "rspec-given"
   gem "guard-rspec", require: false
+  gem 'rspec-rails', '~> 3.7'
 end
 
 group :development do
